@@ -6,7 +6,7 @@ Android notes application
 - It allows users to create, edit, and delete notes, storing them in a Firebase Firestore database. 
 - The application features a login screen, a notes listing screen, and a detailed note editing screen. 
 - Firebase Authentication is used to manage user login authentication.
-- 
+  
 **##Requiremnts**
 Kotlin (version 2.1.0), Firebase (for authentication and firebase database for storing notes data), Android Studio
 
