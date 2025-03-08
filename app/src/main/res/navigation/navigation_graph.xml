@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="iu.b590.spring2025.midterm_section6.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action android:id="@+id/navigateToNotes"
+            app:destination="@id/notesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notesFragment"
+        android:name="iu.b590.spring2025.midterm_section6.NotesFragment"
+        android:label="fragment_notes"
+        tools:layout="@layout/fragment_notes" >
+        <action android:id="@+id/navigateToNote"
+            app:destination="@id/noteFragment" />
+        <action android:id="@+id/navigateToLogin"
+            app:destination="@id/loginFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/noteFragment"
+        android:name="iu.b590.spring2025.midterm_section6.NoteFragment"
+        android:label="fragment_note"
+        tools:layout="@layout/fragment_note" >
+                <action android:id="@+id/navigateToNotes"
+                    app:destination="@id/notesFragment" />
+        <argument
+            android:name="noteTitle"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="noteDescription"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="noteDocumentId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+
+    </fragment>
+
+</navigation>
